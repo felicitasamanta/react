@@ -8,7 +8,41 @@ import image4 from "./assets/images/4.png";
 function App() {
   return (
     <div class="container mt-4 ">
-      <section class="text-center ">
+      <header>
+        <nav class="navbar navbar-expand-sm bg-secondary bg-opacity-10">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              Navbar
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link" aria-current="page" href="#">
+                  Home
+                </a>
+                <a class="nav-link" href="#">
+                  Features
+                </a>
+                <a class="nav-link" href="#">
+                  Pricing
+                </a>
+           
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <section class="text-center mt-5">
         <h2 class="fs-4">Programavimo kursai</h2>
         <div class="d-flex flex-wrap justify-content-around pt-4 text-light fw-bolder gap-3 px-4 flex-shrink-1">
           <div class="card col-md-3 col-sm-5 rounded-0 flex-grow-1">
@@ -48,7 +82,7 @@ function App() {
         <h2 class="fs-4">Mūsų dėstytojai</h2>
         <hr></hr>
         <div class="d-flex flex-wrap justify-content-center px-2 gap-3 ">
-        <div class="col-md-5 col-sm-12 bg-white border border-secondary border-opacity-50 d-flex justify-content-between p-2 flex-wrap g-3">
+          <div class="col-md-5 col-sm-12 bg-white border border-secondary border-opacity-50 d-flex justify-content-between p-2 flex-wrap g-3">
             <div class="flex-grow-1 d-flex justify-content-center ">
               <img
                 src={image1}
@@ -112,7 +146,7 @@ function App() {
             </div>
           </div>
           <div class="col-md-5 col-sm-12 bg-white border border-secondary border-opacity-50 d-flex justify-content-between p-2 flex-wrap g-3">
-            <div class="flex-grow-1 d-flex justify-content-center "> 
+            <div class="flex-grow-1 d-flex justify-content-center ">
               <img
                 src={image4}
                 alt="react logo"
