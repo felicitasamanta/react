@@ -17,7 +17,6 @@ const coursesData = [
     cssClass1: "bg-primary",
     cssClass2: "bg-primary",
   },
-  
 ];
 
 export default coursesData;

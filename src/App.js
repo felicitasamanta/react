@@ -6,15 +6,18 @@ import teachersData from "./data/teachersData";
 import Teacher from "./components/teacher";
 import SpecialOffers from "./components/specialOffer";
 import specialOffersData from "./data/specialOffersData";
+
 //jei importuojam css, rasome galune, jei js, nerasome - taip atskiria dokumentus
 
 function App() {
   const courses = coursesData;
   const specialOffers = specialOffersData;
-
   const teachers = teachersData;
 
   const coursesAll = [];
+  const specialOffersAll = [];
+  let teachersAll = [];
+
   for (let i = 0; i < courses.length; i++) {
     coursesAll.push(
       // ar cia butinass div??? jei taip ,ar galima deti div su visom klasem
@@ -23,13 +26,31 @@ function App() {
       <Course course={courses[i]}></Course>
     );
   }
-  const specialOffersAll = [];
+
   for (let i = 0; i < specialOffers.length; i++) {
     specialOffersAll.push(
       <SpecialOffers specialOffer={specialOffers[i]}></SpecialOffers>
     );
   }
-  
+  teachersAll = teachers.map((teacher) => {
+    return <Teacher teacher={teacher}></Teacher>;
+  });
+
+  //for each budass
+  // courses.forEach((course) => {
+  //   coursesAll.push(
+  //      <Course course={course}></Course>
+  //   );
+  // });
+
+  //map
+  //
+  //  coursesAll = courses.map((course)=>{
+  //    return  (
+  //     <Course course={course}></Course>
+  //   )
+  // });
+
   return (
     <div class="container mt-4 ">
       <section class="text-center mt-5">
@@ -39,7 +60,9 @@ function App() {
         </div>
         <div class=" d-flex row mt-5">
           <h2 class="fs-4"> Specialus pasiūlymas</h2>
-          <div class="col-6 d-flex flex-grow-1">{specialOffersAll}</div>
+          <div class="col-6 d-flex flex-grow-1 flex-wrap">
+            {specialOffersAll}
+          </div>
         </div>
       </section>
 
@@ -47,10 +70,7 @@ function App() {
         <h2 class="fs-4">Mūsų dėstytojai</h2>
         <hr></hr>
         <div class="d-flex flex-wrap justify-content-center px-2 gap-3 ">
-          <Teacher teacher={teachers[0]}></Teacher>
-          <Teacher teacher={teachers[1]}></Teacher>
-          <Teacher teacher={teachers[2]}></Teacher>
-          <Teacher teacher={teachers[3]}></Teacher>
+          {teachersAll}
           <div></div>
         </div>
       </section>
