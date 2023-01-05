@@ -6,6 +6,7 @@ import teachersData from "./data/teachersData";
 import Teacher from "./components/teacher";
 import SpecialOffers from "./components/specialOffer";
 import specialOffersData from "./data/specialOffersData";
+import Skaiciuokle from "./components/skaiciuokle";
 
 //jei importuojam css, rasome galune, jei js, nerasome - taip atskiria dokumentus
 
@@ -58,7 +59,14 @@ function App() {
           <div class="col-5 gap-3 d-flex flex-grow-1 flex-wrap">
             {specialOffersAll}
           </div>
+          <div class="mt-5">
+          <h2 class="fs-4">Skaičiuoklė</h2>
+          <div>
+            <Skaiciuokle></Skaiciuokle>
+          </div>
         </div>
+          </div>
+         
       </section>
 
       <section class="mt-5 h-100 bg-secondary bg-opacity-10 pb-5">
