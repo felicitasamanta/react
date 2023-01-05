@@ -6,8 +6,8 @@ const specialOffersData = [
     cssClass2: "bg-danger",
   },
   {
-    title: "JAVA beginners",
-    price: "0.99",
+    title: "JAVA advanced",
+    price: " 5.99",
     cssClass1: "bg-danger",
     cssClass2: "bg-danger",
   },

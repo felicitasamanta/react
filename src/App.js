@@ -19,12 +19,7 @@ function App() {
   let teachersAll = [];
 
   for (let i = 0; i < courses.length; i++) {
-    coursesAll.push(
-      // ar cia butinass div??? jei taip ,ar galima deti div su visom klasem
-      // <div class="d-flex flex-wrap justify-content-around pt-4 text-light fw-bolder gap-3 px-4 flex-shrink-1">
-
-      <Course course={courses[i]}></Course>
-    );
+    coursesAll.push(<Course course={courses[i]}></Course>);
   }
 
   for (let i = 0; i < specialOffers.length; i++) {
@@ -58,9 +53,9 @@ function App() {
         <div class="d-flex flex-wrap justify-content-around pt-4 text-light fw-bolder gap-3 px-4 flex-shrink-1">
           {coursesAll}
         </div>
-        <div class=" d-flex row mt-5">
+        <div class=" d-flex row mt-5 ">
           <h2 class="fs-4"> Specialus pasiūlymas</h2>
-          <div class="col-6 d-flex flex-grow-1 flex-wrap">
+          <div class="col-5 gap-3 d-flex flex-grow-1 flex-wrap">
             {specialOffersAll}
           </div>
         </div>
