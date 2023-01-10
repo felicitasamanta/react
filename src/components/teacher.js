@@ -9,7 +9,7 @@ function Teacher(props) {
 
   return (
     <div class="col-md-5 col-sm-12 bg-white border border-secondary border-opacity-50 d-flex justify-content-between p-2 flex-wrap">
-      <div class="flex-grow-1 d-flex justify-content-center ">
+      <div class="flex-grow-1 d-flex justify-content-center align-items-center ">
         <img
           src={image}
           alt="react logo"
