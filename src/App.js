@@ -20,16 +20,14 @@ function App() {
   let teachersAll = [];
 
   for (let i = 0; i < courses.length; i++) {
-    coursesAll.push(<Course course={courses[i]}></Course>);
+    coursesAll.push(<Course course={courses[i]} />);
   }
 
   for (let i = 0; i < specialOffers.length; i++) {
-    specialOffersAll.push(
-      <SpecialOffers specialOffer={specialOffers[i]}></SpecialOffers>
-    );
+    specialOffersAll.push(<SpecialOffers specialOffer={specialOffers[i]} />);
   }
   teachersAll = teachers.map((teacher) => {
-    return <Teacher teacher={teacher}></Teacher>;
+    return <Teacher teacher={teacher} />;
   });
 
   //for each budass
@@ -60,21 +58,19 @@ function App() {
             {specialOffersAll}
           </div>
           <div class="mt-5">
-          <h2 class="fs-4">Skaičiuoklė</h2>
-          <div>
-            <Skaiciuokle></Skaiciuokle>
+            <h2 class="fs-4">Skaičiuoklė</h2>
+            <div>
+              <Skaiciuokle />
+            </div>
           </div>
         </div>
-          </div>
-         
       </section>
 
       <section class="mt-5 h-100 bg-secondary bg-opacity-10 pb-5">
         <h2 class="fs-4">Mūsų dėstytojai</h2>
         <hr></hr>
-        <div class="d-flex flex-wrap justify-content-center px-2 gap-3 ">
+        <div class="d-flex flex-wrap justify-content-center px-2 gap-3">
           {teachersAll}
-          <div></div>
         </div>
       </section>
     </div>
